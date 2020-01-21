@@ -1,0 +1,61 @@
+.turn_holder {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 70%;
+    height: 60px;
+}
+
+.next_turn_button {
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50px;
+    border: solid 3px darkslategray;
+    font-weight: lighter;
+    float: left !important;
+    -webkit-transition: all 0.7s;
+}
+
+.next_turn_button:hover {
+    background-color: whitesmoke;
+}
+
+.next_turn_button_text {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 32px;
+}
+
+.turn_group_holder {
+    width: 75%;
+    float: right;
+    height: 100%;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    flex: 1;
+}
+
+.turn_team_title {
+    height: 100%;
+    margin-left: 5px;
+    width: 100%;
+    margin-right: 5px;
+    background-color: #d0d0d0;
+    border: solid 3px silver;
+    color: gray;
+}
+
+.turn_team_title.active {
+    background-color: white;
+    border: solid 3px darkslategray;
+    color: black;
+}
+
+.turn_team_text {
+    font-size: 24px;
+    width: 100%;
+    padding-top: 10px;
+    text-align: center;
+}

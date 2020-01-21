@@ -1,0 +1,43 @@
+
+@font-face {
+    font-family: chelaOne;
+    src: url("../assets/fonts/ChelaOne-Regular.ttf");
+}
+
+.chela {
+    font-family: chelaOne !important;
+}
+
+
+
+@font-face {
+    font-family: robotoSlabBold;
+    src: url("../assets/fonts/RobotoSlab-Bold.ttf");
+}
+
+@font-face {
+    font-family: robotoSlabLight;
+    src: url("../assets/fonts/RobotoSlab-Light.ttf");
+}
+
+@font-face {
+    font-family: robotoSlabThin;
+    src: url("../assets/fonts/RobotoSlab-Thin.ttf");
+}
+
+@font-face {
+    font-family: robotoSlab;
+    src: url("../assets/fonts/RobotoSlab-Regular.ttf");
+}
+
+.robotoSlabBold {
+    font-family: robotoSlabBold !important;
+}
+
+.robotoSlabLight {
+    font-family: robotoSlabLight !important;
+}
+
+.robotoSlabThin {
+    font-family: robotoSlabThin !important;
+}

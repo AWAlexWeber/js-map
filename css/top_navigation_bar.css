@@ -1,0 +1,60 @@
+.top_bar_object {
+    width: 100%;
+    height: 70px;
+    background-color: #5f5f5f;
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    text-align: center;
+    font-size: 35px;
+    color: #d0d0d0;
+    padding-top: 5px;
+}
+
+.rightButtonHolder {
+    width: 30% !important;
+    float: right !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-left: 15px;
+    padding-right: 25px;
+    padding-top: 8px;
+}
+
+.leftButtonHolder {
+    width: 30% !important;
+    float: left !important;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding-left: 15px;
+    padding-right: 25px;
+    padding-top: 8px;
+}
+
+.top_bar_title {
+    width: 10% !important;
+    margin-top: -5px;
+    margin-left: 45%;
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+}
+
+.navbar_button_obj {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 19px;
+    -webkit-transition: all 0.7s;
+    color: white !important;
+}
+.navbar_button_obj:hover {
+    text-decoration: none !important;
+}
+
+.navbar_button_obj:hover {
+    font-size: 22px;
+    color: white !important;
+    cursor: pointer;
+}

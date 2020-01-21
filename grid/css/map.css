@@ -1,0 +1,8 @@
+.map_main_holder {
+    width: 70%;
+    background-color: #68919E;
+    position: absolute;
+    right: 20px !important;
+    top: 160px !important;
+    bottom: 20px;
+}
