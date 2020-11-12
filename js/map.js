@@ -231,7 +231,6 @@ function processMapTerrain() {
     }
 
     for (terrain in terrainJSON) {
-
         if (createTerrainEnabling) {
             terrainEnabling[terrain] = 0;
         }
@@ -383,8 +382,10 @@ function drawTerrain() {
 
     for (terrainIterator in terrainEnabling) {
         if (terrainEnabling[terrainIterator] === 1) {
+            console.log(terrainJSON);
+	    console.log(terrainIterator);
+            console.log(terrainEnabling);
             let terrain = terrainJSON[terrainIterator];
-
             let terrain_id = terrain['land_id'] - 1;
             if (landEnabling[terrain_id] == 0 && FORCE_LAND_DISPLAY_RESTRICTION) {
                 continue;
@@ -657,6 +658,7 @@ function drawCities() {
 
             // Aggregating data needed to display this
             let city_title = city['title'];
+	    console.log(city_title);
             let x = city['position_x'];
             let y = city['position_y'];
 

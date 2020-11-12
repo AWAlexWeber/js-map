@@ -10,6 +10,11 @@ $(document).ready(function() {
 
 function loadDefaultAtlas() {
 
+    // Attempting to get current atlas id
+    const queryString = window.location.search;
+    urlParams = new URLSearchParams(queryString);
+    currentAtlasIndex = urlParams.get('atlas'); 
+
     let data = new FormData();
     data.append("method", "GET");
     data.append("atlas_id", currentAtlasIndex);

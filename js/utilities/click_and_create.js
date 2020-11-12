@@ -31,8 +31,18 @@ $(document).ready(function() {
         let type = $("#popup_select_type_selector_obj option:selected").val();
         let land_id = $("#popup_land_selector option:selected").val();
 
+	land_mass_id = -1
+	// Getting the actual land mass id
+	// Getting this index
+        for (let i = 0; i < landJSON.length; i++) {
+                if (landJSON[i]['land_id'] == land_id) {
+                        land_mass_id = i;
+                        break
+                }
+        }
+
         // Building the type category
-        let type_category = type.substr(0, type.indexOf("_")) + "_" + landJSON[land_id - 1]['title'] + "_" + type.substr(type.indexOf("_") + 1);
+        let type_category = type.substr(0, type.indexOf("_")) + "_" + landJSON[land_mass_id]['title'] + "_" + type.substr(type.indexOf("_") + 1);
         type_category = type_category.toLowerCase();
 
         // Getting the atlas ID
@@ -47,8 +57,12 @@ $(document).ready(function() {
             destruction_date = "50000";
         }
 
-        // Creating the dataset for insertion...
+	// Modifying the Y value to use the Atlas's total dimensions
+	console.log(y);
+	y = MAP_HEIGHT - y;
+	console.log(y);
 
+        // Creating the dataset for insertion...
         let data = new FormData();
         data.append('x', x);
         data.append('y', y);
@@ -163,8 +177,17 @@ function display_click_popup(x, y) {
     // Forcing the creation time to be the land creation time, just in case we want to use that...
     let current_creation_time = $("#creation_time").val()
     if (current_creation_time == null || current_creation_time == undefined || current_creation_time.length <= 0) {
-        let land_creation_time = JSON.parse(landJSON[land_mass_id]['time_set'])[0][0];
-        $("#creation_time").val(land_creation_time);
+	// Getting this index
+	for (let i = 0; i < landJSON.length; i++) {
+		if (landJSON[i]['land_id'] == land_mass_id) {
+			land_mass_id = i;
+			break
+		}
+	}
+	if (landJSON[land_mass_id]['time_set']) {
+		let land_creation_time = JSON.parse(landJSON[land_mass_id]['time_set'])[0][0];
+        	$("#creation_time").val(land_creation_time);
+	}
     }
 
     land_mass_id = land_mass_id.toString();

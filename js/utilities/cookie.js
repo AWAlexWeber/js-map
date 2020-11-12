@@ -1,8 +1,10 @@
 // Primary file for saving and loading cookies
+cookieSaving = false;
 
 // Function that will load all data from cookies, save it, and reload it
 function loadFromCookies() {
-
+    return;
+    
     // Saving the cookies now to our local system, then doing a general reload
     let cookieToLoad = JSON.parse(this.getCookie("info"));
     console.log(cookieToLoad);
@@ -120,8 +122,10 @@ $(document).ready(function() {
 
 // Function for saving cookies before unloading
 window.onbeforeunload = function (evt) {
-
-    this.updateCookies();
+    // Only do this if we have cookie saving enabled
+    if (cookieSaving) {
+    	this.updateCookies();
+    }
     evt.preventDefault();
 }
 
